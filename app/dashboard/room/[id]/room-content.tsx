@@ -36,7 +36,7 @@ const TranscriptionContent = ({ operationId, operationDetails }: OperationIdProp
     }
 
     try {
-      const response = await fetch("http://ec2-52-91-35-107.compute-1.amazonaws.com:5000/api/downloadReport", {
+      const response = await fetch("https://ec2-52-91-35-107.compute-1.amazonaws.com:5000/api/downloadReport", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -113,7 +113,7 @@ export function RoomContent({ params }: RoomContentProps) {
 
   const createOperation = async (details: OperationDetails) => {
     try {
-      const userResponse = await fetch("http://ec2-52-91-35-107.compute-1.amazonaws.com:5000/api/userId", {
+      const userResponse = await fetch("https://ec2-52-91-35-107.compute-1.amazonaws.com:5000/api/userId", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -129,7 +129,7 @@ export function RoomContent({ params }: RoomContentProps) {
       const userData = await userResponse.json()
       const user_id = userData.user_id
 
-      const operationResponse = await fetch("http://ec2-52-91-35-107.compute-1.amazonaws.com:5000/api/createOperation", {
+      const operationResponse = await fetch("https://ec2-52-91-35-107.compute-1.amazonaws.com:5000/api/createOperation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
