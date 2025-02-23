@@ -18,7 +18,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "http://ec2-52-91-35-107.compute-1.amazonaws.com:3000"}})
 app.config['SECRET_KEY'] = 'your_secret_key'
 
 

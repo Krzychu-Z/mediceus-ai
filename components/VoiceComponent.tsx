@@ -52,7 +52,7 @@ const VoiceChat = ({ operationId }: VoiceChatProps) => {
         clientTools: {
           displayEvent: async ({eventValue, eventType}: {eventValue: string, eventType: string}) => {
             addRow(eventValue);
-            await fetch('http://localhost:5000/api/sendNotes', {
+            await fetch('http://ec2-52-91-35-107.compute-1.amazonaws.com:5000/api/sendNotes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

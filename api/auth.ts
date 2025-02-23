@@ -23,7 +23,7 @@ type LoginCredentials = {
   }
   
   export async function login(credentials: LoginCredentials): Promise<AuthResponse> {
-    const response = await fetch("http://localhost:5000/auth/login", {
+    const response = await fetch("http://ec2-52-91-35-107.compute-1.amazonaws.com:5000/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ type LoginCredentials = {
   }
   
   export async function register(data: RegisterData): Promise<AuthResponse> {
-    const response = await fetch("http://localhost:5000/auth/register", {
+    const response = await fetch("http://ec2-52-91-35-107.compute-1.amazonaws.com:5000/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
